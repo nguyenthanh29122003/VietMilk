@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>VietMilk</title>
+        <!-- google font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+        <!-- css -->
+        <link rel="stylesheet" href="./css/base.css">
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <!-- javascript -->
+    <script type="text/javascript" src="script.js"></script>
+        <div id="overlay" onclick="CloseF()"></div>
+        <div class="hidden-forms">
+            <form class="hidden-form hidden-form__search">
+                
+                <a class="hidden-form__close" onclick="CloseF()"><img src="./images/close.png"></a>
+
+                <p class="hidden-form__title">Search</p>
+                
+                <div class="hidden-form__search-box">
+                    <input type="text" placeholder="Search for products">
+                    <a><img clas src=".\images\search-interface-symbol.png"></a>
+                </div>
+            </form>
+
+            <form class="hidden-form hidden-form__login">
+                
+                <a class="hidden-form__close" onclick="CloseF()"><img src="./images/close.png"></a>
+
+                <p class="hidden-form__title">Sign in</p>
+
+                <p class="hidden-form__sub-title">Sign in with your username and password</p>
+
+                <div class="form_field">
+                    <input class="form_input" type="text" placeholder=" "><label class="form_lable" >Username</label>
+                </div>
+                <div class="form_field">
+                    <input class="form_input" type="text" placeholder=" "><label class="form_lable" >Password</label>
+                </div>
+
+                <div class="hidden-form__sitebox-recaptcha">
+                    This site is protected by reCAPTCHA and the Google
+                    <a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer">Privacy Policy</a> 
+                    and <a href="https://policies.google.com/terms" target="_blank" rel="noreferrer">Terms of Service</a> apply.
+                </div>
+
+                <button class="hidden-form__btnLogin">Login</button>
+
+                <div class="hidden-form__more">
+                    <div class="hidden-form__more hidden-form__more--nAcc" onclick="ShowR()">No account yet <a href="#New_acc">Sign up?</a></div>
+                    <div class="hidden-form__more hidden-form__more--fPass" onclick="ShowReP()">Forgot password <a href="#Re_password">Recovery password?</a></div>
+                </div>
+                
+                
+            </form>
+
+
+                        
+            <!-- add -->
+            <form class="hidden-form hidden-form__add">
+                <a class="hidden-form__close" onclick="CloseF()"><img src="./images/close.png"></a>
+                <p class="hidden-form__title">Thêm sản phẩm</p>
+                <div class="form_field">
+                <input class="form_input" type="text" placeholder=" "><label class="form_lable" >Mã sản phẩm</label>
+                </div>
+
+                <div class="form_field">
+                <input class="form_input" type="text" placeholder=" "><label class="form_lable" >Tên sản phẩm</label>
+                </div>
+
+                <div class="form_field">
+                <input class="form_input" type="date" placeholder=" "><label class="form_lable" >Ngày nhập</label>
+                </div>
+                
+                <div class="form_field">
+                <input class="form_input" type="number" placeholder=" "><label class="form_lable" >Số lượng</label>
+                </div>
+                
+                <div class="form_field">
+                <input class="form_input" type="text" placeholder=" "><label class="form_lable" >Tên phân loại</label>
+                </div>
+                
+                <div class="form_field">
+                <input class="form_input" type="text" placeholder=" "><label class="form_lable" >Nhà cung cấp</label>
+                </div>
+
+                <div class="products_manager__btn">
+                <button>Thêm sản phẩm</button>
+            </div>
+            </form>
+
+
+            <!-- update form -->
+            <form class="hidden-form hidden-form__update">
+            <a class="hidden-form__close" onclick="CloseF()"><img src="./images/close.png"></a>
+            <p class="hidden-form__title">Cập nhật sản phẩm</p>
+            <p class="hidden-form__sub-title">Nhập mã sản phẩm sau đó chỉnh sửa</p>
+            <div class="form_field">
+                <input class="form_input" type="text" placeholder=" "><label class="form_lable" >Mã sản phẩm</label>
+            </div>
+
+            <div class="form_field">
+                <input class="form_input" type="text" placeholder=" "><label class="form_lable" >Tên sản phẩm</label>
+            </div>
+
+            <div class="form_field">
+                <input class="form_input" type="date" placeholder=" "><label class="form_lable" >Ngày nhập</label>
+            </div>
+            
+            <div class="form_field">
+                <input class="form_input" type="number" placeholder=" "><label class="form_lable" >Số lượng</label>
+            </div>
+            
+            <div class="form_field">
+                <input class="form_input" type="text" placeholder=" "><label class="form_lable" >Tên phân loại</label>
+            </div>
+            
+            <div class="form_field">
+                <input class="form_input" type="text" placeholder=" "><label class="form_lable" >Nhà cung cấp</label>
+            </div>
+
+            <div class="products_manager__btn">
+                <button>Thêm sản phẩm</button>
+            </div>
+            </form>
+
+            <!-- delete form -->
+            <form class="hidden-form hidden-form__delete">
+
+            <a class="hidden-form__close" onclick="CloseF()"><img src="./images/close.png"></a>
+            <p class="hidden-form__title">Xóa sản phẩm</p>
+            <p class="hidden-form__sub-title">Nhập mã sản phẩm để xóa</p>
+            <div class="form_field">
+                <input class="form_input" type="text" placeholder=" "><label class="form_lable" >Mã sản phẩm</label>
+            </div>
+            <div class="products_manager__btn">
+                <button>Xóa sản phẩm</button>
+            </div>
+            </form>
+            <form class="hidden-form hidden-form__signup">
+                
+                <a class="hidden-form__back"  onclick = "ShowL()"><</a>
+
+                <p class="hidden-form__title">Sign up</p>
+
+                <p class="hidden-form__sub-title">Sign up with your information</p>
+
+                <div class="hidden-form__input">
+                    <input class="input_text" id="first-name" type="text" placeholder="Frist name">
+                    <input class="input_text" id="last-name" type="text" placeholder="Last name">
+                    <div class="hidden-form__input--radio">
+                        <input name="sex" id="sex__man" type="radio">
+                        <label >Man</label>
+                        <input name="sex" id="sex__woman" type="radio">
+                        <label >Woman</label>
+                    </div>
+                    <input class="input_text" id="dob" type="text" placeholder="Date of birth dd/mm/yyyy">
+                    <input class="input_text" id="email" type="text" placeholder="Email">
+                    <input class="input_text" id="passwordN" type="text" placeholder="Password">
+                </div>
+
+                <div class="hidden-form__sitebox-recaptcha">
+                    This site is protected by reCAPTCHA and the Google
+                    <a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer">Privacy Policy</a> 
+                    and <a href="https://policies.google.com/terms" target="_blank" rel="noreferrer">Terms of Service</a> apply.
+                </div>
+
+                <button class="hidden-form__btnSignUp">Sign up</button>
+                
+            </form>
+            </form>
+
+            <!-- form forgot password -->
+            <form class="hidden-form hidden-form__recovery">
+                
+                <a class="hidden-form__back" onclick="ShowL()"><</a>
+
+                <p class="hidden-form__title">Recovery password</p>
+
+                <p class="hidden-form__sub-title">Recovery password with your email:</p>
+
+                <div class="hidden-form__input">
+                    <input class="input_text" id="email" type="text" placeholder="Email">
+                </div>
+
+                <div class="hidden-form__sitebox-recaptcha">
+                    This site is protected by reCAPTCHA and the Google
+                    <a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer">Privacy Policy</a> 
+                    and <a href="https://policies.google.com/terms" target="_blank" rel="noreferrer">Terms of Service</a> apply.
+                </div>
+
+                <button class=".hidden-form__recovery__btnRecovery">Recovery</button>
+            </form>
+            <!-- cart -->
+            <form class="hidden-form hidden-form__cart">
+        
+                <a class="hidden-form__close" onclick="CloseF()"><img src="./images/close.png"></a>
+
+                <p class="hidden-form__title">Your cart</p>
+                
+
+                <div class="hidden-form__cart-list">
+                    <img class="cart-list__img" src="./images/shopping-cart.png">
+                    <p class="cart-list__title">No product yet</p>
+                </div>
+
+                <div class="hidden-form__footer">
+                    <div class="hidden-form__footer--total">Total: <span>000₫</span></div>
+                    <button class="hidden-form__footer__btnPayUp">Pay up</button>
+                </div>
+                            
+            </form>
+
+        </div>
+            
+        <!-- header -->
+        <div class="header">
+            
+            <div class="header--left">
+                <a href="index.html">
+                    <img id="logoHome" clas src=".\images\milk.png">
+                    <span>VietMilk</span>
+                </a>
+            </div>
+            
+            <div class="header--right">
+                
+                <a onclick="ShowS()" class="header__item header__item--right">
+                    <img clas src=".\images\search-interface-symbol.png">
+                </a>
+                
+                <a onclick="ShowL()" class="header__item header__item--right">
+                    <img clas src=".\images\avatar.png">
+                </a>
+                
+                <a onclick="ShowC()" class="header__item header__item--right">
+                    <img clas src=".\images\shopping-cart.png">
+                </a>
+            </div>
+        </div>
+        
+        <!-- nav-bar -->
+        <div class="desk-menu">
+            <ul class="product-selections">
+                <a href="index.html" class="product__item">HOME</a>
+                <a href="#new-arrivals" class="product__item">NEW ARRIVALS</a>
+                <a href="all_products.html" class="product__item">ALL PRODUCTS</a>
+                <a href="#sale-products" class="product__item">SALE</a>
+                <a href="#footer" class="product__item">CONTACT</a>
+            </ul>
+        </div>
+
+        <div class="container">
+            <div class="contact">
+                <h1>CONTACT US</h1>
+                <div class="form_field">
+                    <input class="form_input" type="text" placeholder=" "><label class="form_lable" >Name / Company Name</label>
+                </div>
+                <div class="form_field">
+                    <input class="form_input" type="text" placeholder=" "><label class="form_lable" >Phone Number</label>
+                </div>
+                <div class="form_field">
+                    <input class="form_input" type="text" placeholder=" "><label class="form_lable" >Email</label>
+                </div>
+                <div class="form_field">
+                    <textarea class="form_input" type="text" placeholder=" " cols="118" rows="10" style="font-size: 2rem; padding-top: 10px; padding-left: 10px;"></textarea><label class="form_lable" >Message</label>
+                </div>
+                <div class="products_manager__btn">
+                    <button>SEND IT</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- footer -->
+        <footer id="footer" class="footer">
+            <div class="footer__item">
+                <p>GIỚI THIỆU</p>
+                <p>VIETMILK</p>
+                <img src=".\images\verify.png">
+            </div>
+            <div class="footer__item">
+                <p>CÂU HỎI</p>
+                <ul>
+                    <li><a>Tìm kiếm</a></li>
+                    <li><a>Giới thiệu</a></li>
+                    <li><a>Chính sách đổi trả</a></li>
+                    <li><a>Chính sách bảo mật</a></li>
+                    <li><a>Điều khoản dịch vụ</a></li>
+                </ul>
+            </div>
+            <div class="footer__item">
+                <p>CÔNG TY TNHH VIETMILK</p>
+                <ul>
+                    <li><a>Địa chỉ: Lầu 2, 26 Nguyễn Trãi, <br>phường Bến Thành, Quận 1, TP.Hồ Chí Minh</a></li>
+                    <li><a>Điện thoại: 0827140318</a></li>
+                    <li><a>Mail: nguyenthanh29122003@gmail.com</a></li>
+                </ul>
+            </div>
+            <div class="footer__item">
+                <p>FANPAGE</p>
+                <a href="https://www.facebook.com/" class="footer media-button">f</a>
+                <a class="footer media-button">i</a>
+                <a class="footer media-button" href="contact_form.html">C</a>
+            </div>
+        </footer>
+    </body>
+</html>
